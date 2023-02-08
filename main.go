@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Order-Gui/gui"
+	"OrderGui/gui"
 	_ "embed"
 	"fmt"
 	"github.com/twgh/xcgui/xc"

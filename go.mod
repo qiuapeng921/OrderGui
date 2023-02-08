@@ -1,4 +1,4 @@
-module Order-Gui
+module OrderGui
 
 go 1.17
 
