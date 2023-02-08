@@ -18,7 +18,7 @@ func main() {
 	_ = xc.SetXcguiPath(dllDir)
 	app := gui.NewGui()
 
-	app.LoginView()
+	app.Dashboard()
 
 	app.Run()
 	app.Exit()

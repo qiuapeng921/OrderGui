@@ -34,7 +34,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 		return 0
 	})
 
-	widget.NewShapeText(0, 0, 60, 30, "商品查询:", headerLayout.Handle).LayoutItem_SetMargin(20, 0, 0, 0)
+	widget.NewShapeText(0, 0, 60, 30, "商品查询:", headerLayout.Handle).LayoutItem_SetMargin(42, 0, 0, 0)
 	goodsSearchText := widget.NewEdit(0, 0, 100, 30, headerLayout.Handle)
 	goodsSearchText.SetDefaultText("供应商编码")
 	goodsSearchText.Event_EDIT_CHANGED(func(pbHandled *bool) int {
@@ -43,7 +43,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 		return 0
 	})
 
-	widget.NewShapeText(0, 0, 60, 30, "订单出货:", headerLayout.Handle).LayoutItem_SetMargin(20, 0, 0, 0)
+	widget.NewShapeText(0, 0, 60, 30, "订单出货:", headerLayout.Handle).LayoutItem_SetMargin(42, 0, 0, 0)
 	warehouseOutText := widget.NewEdit(0, 0, 100, 30, headerLayout.Handle)
 	warehouseOutText.SetDefaultText("订单条码")
 	warehouseOutText.Event_EDIT_CHANGED(func(pbHandled *bool) int {
@@ -52,7 +52,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 		return 0
 	})
 
-	widget.NewShapeText(0, 0, 60, 30, "订单退货:", headerLayout.Handle).LayoutItem_SetMargin(20, 0, 0, 0)
+	widget.NewShapeText(0, 0, 60, 30, "订单退货:", headerLayout.Handle).LayoutItem_SetMargin(30, 0, 0, 0)
 	warehouseInputText := widget.NewEdit(0, 0, 100, 30, headerLayout.Handle)
 	warehouseInputText.SetDefaultText("订单条码")
 	warehouseInputText.Event_EDIT_CHANGED(func(pbHandled *bool) int {
@@ -79,7 +79,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 	ls.AddColumnText(210, "name1", "成本")
 	ls.AddColumnText(210, "name2", "销量")
 	ls.AddColumnText(210, "name3", "利润")
-	ls.AddColumnText(210, "name4", "入库")
+	ls.AddColumnText(200, "name4", "入库")
 	// 循环添加数据
 	for i := 0; i < 1; i++ {
 		// 添加行
@@ -139,7 +139,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 	}
 
 	// TODO 底部右边布局
-	footerRightLayout := widget.NewLayoutEle(0, 0, 510, 340, footerLayout.Handle)
+	footerRightLayout := widget.NewLayoutEle(0, 0, 520, 340, footerLayout.Handle)
 	// footerRightLayout.ShowLayoutFrame(true)
 
 	widget.NewShapeText(0, 0, 60, 30, "退货出库:", footerRightLayout.Handle)
@@ -159,7 +159,7 @@ func (g *Gui) Console() *widget.LayoutEle {
 	})
 
 	// 创建List
-	goodsReturnList := widget.NewList(10, 33, 500, 300, footerRightLayout.Handle)
+	goodsReturnList := widget.NewList(10, 33, 520, 300, footerRightLayout.Handle)
 	goodsReturnList.LayoutItem_SetMargin(0, 0, 0, 0)
 	// 创建表头数据适配器
 	goodsReturnList.CreateAdapterHeader()

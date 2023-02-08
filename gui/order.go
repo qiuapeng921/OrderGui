@@ -30,7 +30,7 @@ func (g *Gui) Order() *widget.LayoutEle {
 	})
 
 	addBut := widget.NewButton(0, 0, 70, 30, "＋新增订单", headerLayout.Handle)
-	addBut.LayoutItem_SetMargin(500, 0, 0, 0)
+	addBut.LayoutItem_SetMargin(520, 0, 0, 0)
 	addBut.Event_BnClick(func(pbHandled *bool) int {
 		addWin := window.NewModalWindow(500, 600, "新增订单", g.win.GetHWND(), xcc.Window_Style_Modal)
 		// 设置边框
@@ -40,7 +40,7 @@ func (g *Gui) Order() *widget.LayoutEle {
 	})
 
 	bodyLayout := widget.NewLayoutEle(1, 1, 850, 440, layout.Handle)
-	bodyLayout.ShowLayoutFrame(true)
+	// bodyLayout.ShowLayoutFrame(true)
 	// 创建List
 	ls := widget.NewList(10, 33, 840, 430, bodyLayout.Handle)
 	// 创建表头数据适配器
@@ -62,7 +62,7 @@ func (g *Gui) Order() *widget.LayoutEle {
 	ls.AddColumnText(120, "name9", "添加时间")
 	ls.AddColumnText(100, "name9", "操作")
 	// 循环添加数据
-	for i := 0; i < 10; i++ {
+	for i := 0; i < 13; i++ {
 		// 添加行
 		index := ls.AddItemText("")
 		// 置行数据
